@@ -1,0 +1,14 @@
+site_name: Корпоративный styleguide для python
+nav:
+  - Введение: index.md
+  - Основные принципы: draft.md
+  - Структура проекта:
+    - FastAPI: 'structure/fastapi.md'
+  - Стиль программирования: draft.md
+  - Тестирование: draft.md
+  - Документирование: draft.md
+  - Ревью: draft.md
+theme:
+  name: material
+plugins:
+  - mermaid2

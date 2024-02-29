@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "python-corporate-styleguide"
+version = "0.1.0"
+description = ""
+authors = ["Egor <slamihin123@gmail.com>"]
+readme = "README.md"
+packages = [{include = "python_corporate_styleguide"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.12"
+mkdocs-mermaid2-plugin = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
