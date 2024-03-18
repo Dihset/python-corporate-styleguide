@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../draft/" rel="prev"/>
+<link href="../../draft/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.12" name="generator"/>
+<title>FastAPI - Корпоративный styleguide для python</title>
+<link href="../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#fastapi">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Корпоративный styleguide для python" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Корпоративный styleguide для python">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Корпоративный styleguide для python
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              FastAPI
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Dihset/python-corporate-styleguide" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    Dihset/python-corporate-styleguide
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Корпоративный styleguide для python" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Корпоративный styleguide для python">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Корпоративный styleguide для python
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Dihset/python-corporate-styleguide" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    Dihset/python-corporate-styleguide
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Введение
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../draft/">
+<span class="md-ellipsis">
+    Основные принципы
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Структура проекта
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Структура проекта
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    FastAPI
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    FastAPI
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      Введение
+    </span>
+</a>
+<nav aria-label="Введение" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#domain">
+<span class="md-ellipsis">
+      Domain
+    </span>
+</a>
+<nav aria-label="Domain" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entities">
+<span class="md-ellipsis">
+      Entities
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exceptions">
+<span class="md-ellipsis">
+      Exceptions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#services">
+<span class="md-ellipsis">
+      Services
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-cases">
+<span class="md-ellipsis">
+      Use Cases
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gateways">
+<span class="md-ellipsis">
+      Gateways
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#services_1">
+<span class="md-ellipsis">
+      Services
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api">
+<span class="md-ellipsis">
+      API
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workers">
+<span class="md-ellipsis">
+      Workers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core">
+<span class="md-ellipsis">
+      Core
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admin">
+<span class="md-ellipsis">
+      Admin
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#helpers">
+<span class="md-ellipsis">
+      Helpers
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../draft/">
+<span class="md-ellipsis">
+    Стиль программирования
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../draft/">
+<span class="md-ellipsis">
+    Тестирование
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../draft/">
+<span class="md-ellipsis">
+    Документирование
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../draft/">
+<span class="md-ellipsis">
+    Ревью
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      Введение
+    </span>
+</a>
+<nav aria-label="Введение" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#domain">
+<span class="md-ellipsis">
+      Domain
+    </span>
+</a>
+<nav aria-label="Domain" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entities">
+<span class="md-ellipsis">
+      Entities
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exceptions">
+<span class="md-ellipsis">
+      Exceptions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#services">
+<span class="md-ellipsis">
+      Services
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-cases">
+<span class="md-ellipsis">
+      Use Cases
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gateways">
+<span class="md-ellipsis">
+      Gateways
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#services_1">
+<span class="md-ellipsis">
+      Services
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api">
+<span class="md-ellipsis">
+      API
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workers">
+<span class="md-ellipsis">
+      Workers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core">
+<span class="md-ellipsis">
+      Core
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admin">
+<span class="md-ellipsis">
+      Admin
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#helpers">
+<span class="md-ellipsis">
+      Helpers
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="fastapi">Структура FastAPI приложений</h1>
+<h2 id="_1">Введение</h2>
+<p>В эффективной разработке программного обеспечения структура проекта играет ключевую роль. Она не только облегчает навигацию по проекту, упрощает добавление новых функций и обслуживание существующего кода, но и способствует улучшению сотрудничества в команде и повышению качества конечного продукта.</p>
+<p><strong>Цель</strong> - Предоставить четкие рекомендации и лучшие практики по структурированию приложений FastAPI. Как разделить ваш проект на логические модули, где и как лучше размещать определенные типы файлов и директорий, а также как поддерживать чистоту и порядок в вашей кодовой базе.</p>
+<p>Эта структура предназначена не только для улучшения текущей работы над проектом, но и для обеспечения его масштабируемости в будущем. Она поможет новым членам команды быстрее адаптироваться в проекте, а также упростит процесс ревью кода и тестирования.</p>
+<p>Следуя предложенным рекомендациям, вы сможете создать мощное и гибкое приложение, которое не только отвечает современным требованиям к разработке, но и является удобным для работы в команде разработчиков разного уровня квалификации.</p>
+<pre><code>├── app
+│   ├── admin
+│   │   └── ...
+│   ├── api
+│   │   └── {{ api_name }}  # Например v1 | v2 | internal | graphql | jsonrpc
+│   │       ├── views
+│   │       │   └──  ...
+│   │       ├── schemas
+│   │       │   └──  ...
+│   │       └── router.py
+│   ├── core
+│   │   ├── config
+│   │   │   ├── general.py
+│   │   │   └── ...
+│   │   └── containers.py
+│   ├── domain
+│   │   └── {{ sub_domain }}
+│   │       ├── entities
+│   │       │   └── ...
+│   │       ├── exceptions
+│   │       │   └── ...
+│   │       ├── services
+│   │       │   └── ...
+│   │       └── use_cases
+│   │           └── ...
+│   ├── gateways
+│   │   └── {{ gateway_name }}
+│   │       └── ...
+│   ├── helpers
+│   │   └── ...
+│   ├── services
+│   │   └── ...
+│   ├── workers
+│   │    └── ...
+│   └── main.py
+├── tests
+│   ├── conftest.py
+│   ├── domain
+│   │   └── ...
+│   ├── factories.py
+│   ├── gateways
+│   │   └── ...
+│   ├── helpers.py
+│   └── services
+│       └── ...
+├── poetry.lock
+└── pyproject.toml
+</code></pre>
+<h3 id="domain">Domain</h3>
+<p>Центральная часть вашего приложения, содержащая бизнес-логику и бизнес-модели. Этот слой отвечает за представление концепций домена и их связей специфичных для предметной области проекта.</p>
+<div class="mermaid">---
+title: Связи в домене
+---
+classDiagram
+    class Entity{
+        atribute_1
+        atribute_2
+        atribute_3
+    }
+    class IService{
+        &lt;&lt;interface&gt;&gt;
+        *do_something(~Entity~ obj) ~Entity~
+    }
+    class UseCase{
+        -IService service_1
+        -IService service_2
+        #execute(~Entity~ obj) ~Entity~
+    }
+    UseCase &lt;.. IService : Dependency
+    UseCase &lt;.. Entity : Dependency
+    IService &lt;.. Entity : Dependency
+</div>
+<h4 id="entities">Entities</h4>
+<p>Описывают основные доменные объекты, их свойства. Энтити служат представлением вашего бизнес-модели и её ключевых атрибутов.</p>
+<h4 id="exceptions">Exceptions</h4>
+<p>Специфические исключения домена, которые могут возникать в процессе выполнения бизнес-логики. Использование кастомных исключений упрощает обработку ошибок и повышает читаемость кода.</p>
+<h4 id="services">Services</h4>
+<p>Сервисы домена только <strong>описывают интерфейсы</strong> сложной бизнес-логики, оперируя сущностями (entities) и ошибками (exceptions). Это слой, описывает атомарные операции с сущностями бизнеса. Принимает на вход только сущности (entities) или стандартные типы данных и возвращает только сущности (entities) или доменные ошибки (exceptions).</p>
+<h4 id="use-cases">Use Cases</h4>
+<p>Описывают конкретные сценарии использования или потоки выполнения бизнес-операций, ориентированные на достижение конкретных целей пользователями или системой.</p>
+<h3 id="gateways">Gateways</h3>
+<h3 id="services_1">Services</h3>
+<h3 id="api">API</h3>
+<h3 id="workers">Workers</h3>
+<h3 id="core">Core</h3>
+<h3 id="admin">Admin</h3>
+<h3 id="helpers">Helpers</h3>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
